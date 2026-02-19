@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | AffiliNova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-enter">
+<header class="top-nav">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html">AFFILINOVA</a>
+    <div></div>
+    <a class="btn" href="index.html">Shop</a>
+  </div>
+</header>
+<main class="container" style="padding-top:1rem;">
+  <section class="panel" id="adminLoginPanel">
+    <h2>Admin Login</h2>
+    <input id="adminEmail" type="email" placeholder="Admin Email" />
+    <input id="adminPass" type="password" placeholder="Admin Password" />
+    <button class="btn btn-primary" id="adminLoginBtn">Login</button>
+    <p class="msg" id="adminMsg"></p>
+  </section>
+
+  <section class="panel" id="adminPanel" style="display:none; margin-top:1rem;">
+    <h2>Manage Listings</h2>
+    <div class="grid-2">
+      <input id="title" type="text" placeholder="Product title" />
+      <input id="category" type="text" placeholder="Category" />
+      <input id="price" type="number" step="0.01" placeholder="Price" />
+      <input id="image" type="url" placeholder="Image URL" />
+      <input id="url" type="url" placeholder="Amazon affiliate URL" />
+      <button class="btn btn-primary" id="addBtn">Add Product</button>
+    </div>
+    <p class="msg" id="adminMsg2"></p>
+    <div id="productList" class="list"></div>
+  </section>
+</main>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
