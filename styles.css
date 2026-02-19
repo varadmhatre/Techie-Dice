@@ -1,0 +1,68 @@
+:root {
+  --bg: #12100d;
+  --paper: #1b1813;
+  --paper-soft: #232019;
+  --text: #f3ebde;
+  --muted: #c3b49e;
+  --line: #3d362d;
+  --accent: #e1c8a2;
+  --accent-2: #b59264;
+  --danger: #bb6c6c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 0%, #1b1813, var(--bg) 45%);
+}
+.page-enter { animation: fadeSlide .5s ease; }
+@keyframes fadeSlide { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0);} }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 1rem; }
+a { color: inherit; text-decoration: none; }
+.top-nav { position: sticky; top: 0; z-index: 30; background: rgba(18,16,13,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav-shell { display: grid; grid-template-columns: 180px 1fr auto; gap: .8rem; align-items: center; padding: .85rem 0; }
+.brand { font-weight: 800; letter-spacing: .06em; color: var(--accent); }
+.search-wrap input { width: 100%; }
+.nav-actions { display: flex; gap: .5rem; }
+.layout { display: grid; grid-template-columns: 250px 1fr; gap: 1rem; padding-top: 1rem; }
+.sidebar h3 { margin: .4rem 0 .6rem; }
+.filter-list { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .8rem; }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: .9rem; }
+.hero h1 { margin: .3rem 0; font-size: clamp(1.4rem, 2.2vw, 2rem); }
+.eyebrow { margin: 0; color: var(--accent); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+.muted { color: var(--muted); }
+.btn { background: var(--paper-soft); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: .62rem .84rem; cursor: pointer; transition: all .2s ease; font-weight: 600; }
+.btn:hover { transform: translateY(-1px); border-color: var(--accent-2); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), #d7b689); color: #21180d; border-color: transparent; }
+.btn-subtle { background: transparent; }
+.btn-danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.w100 { width: 100%; }
+input { width: 100%; background: #17140f; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: .64rem; }
+.row { display: flex; gap: .5rem; }
+.section-title { color: var(--muted); margin: .8rem 0; }
+.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: .9rem; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.hover-lift { transition: transform .25s ease, box-shadow .25s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,.25); }
+.card img { width: 100%; height: 190px; object-fit: cover; }
+.card-body { padding: .8rem; }
+.badge { color: var(--muted); margin: 0; font-size: .78rem; }
+.title { margin: .35rem 0; min-height: 44px; }
+.price { color: var(--accent); margin: 0 0 .65rem; font-weight: 700; }
+.price.big { font-size: 1.35rem; }
+.chip { padding: .4rem .62rem; background: #17140f; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; cursor: pointer; }
+.chip-active { background: var(--accent); color: #1e1408; border-color: transparent; }
+.product-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; padding-top: 1rem; }
+.product-image { width: 100%; max-height: 620px; object-fit: cover; border-radius: 10px; }
+.list { display: grid; gap: .65rem; }
+.list-item { display: flex; justify-content: space-between; gap: .5rem; align-items: center; padding: .65rem; border: 1px solid var(--line); border-radius: 10px; background: #17140f; }
+.msg { min-height: 1.1rem; color: #9dc28f; }
+.total { color: var(--accent); font-weight: 700; }
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .nav-shell { grid-template-columns: 1fr; }
+  .product-layout { grid-template-columns: 1fr; }
+  .nav-actions { flex-wrap: wrap; }
+}
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; } @media (max-width:980px){ .grid-2 { grid-template-columns:1fr; } }

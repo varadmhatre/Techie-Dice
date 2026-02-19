@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AffiliNova | Discover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-enter">
+  <header class="top-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">AFFILINOVA</a>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search 1,000+ products" />
+      </div>
+      <nav class="nav-actions">
+        <a class="btn btn-subtle" href="auth.html">Account</a>
+        <a class="btn btn-subtle" href="admin.html">Admin</a>
+        <a class="btn btn-primary" href="cart.html">🛒 Cart <span id="cartCountNav">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="sidebar panel">
+      <h3>Category</h3>
+      <div id="categoryList" class="filter-list"></div>
+      <h3>Price</h3>
+      <div class="row">
+        <input id="minPrice" type="number" placeholder="Min" />
+        <input id="maxPrice" type="number" placeholder="Max" />
+      </div>
+      <button id="applyFilters" class="btn btn-primary w100">Apply</button>
+    </aside>
+
+    <section>
+      <section class="hero panel">
+        <p class="eyebrow">Handpicked affiliate products</p>
+        <h1>Clean, premium shopping UX with smooth transitions</h1>
+        <p class="muted">Browse freely. Login is only required at purchase/checkout.</p>
+      </section>
+
+      <div class="section-title">
+        <p id="count"></p>
+      </div>
+      <div id="catalog" class="catalog"></div>
+    </section>
+  </main>
+
+  <template id="productTpl">
+    <article class="card hover-lift">
+      <a class="image-link"><img alt="product" /></a>
+      <div class="card-body">
+        <p class="badge"></p>
+        <h3 class="title"></h3>
+        <p class="price"></p>
+        <div class="row">
+          <button class="btn add">Add to Cart</button>
+          <button class="btn btn-primary buy">Buy Now</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="common.js"></script>
+  <script src="store.js"></script>
+</body>
+</html>

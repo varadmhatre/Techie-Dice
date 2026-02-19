@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product | AffiliNova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-enter">
+<header class="top-nav">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html">AFFILINOVA</a>
+    <nav class="nav-actions">
+      <a class="btn btn-subtle" href="index.html">Back to Shop</a>
+      <a class="btn btn-primary" href="cart.html">🛒 Cart</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container product-layout">
+  <section class="panel">
+    <img id="pImage" class="product-image" alt="product" />
+  </section>
+  <section class="panel">
+    <p id="pCategory" class="badge"></p>
+    <h1 id="pTitle"></h1>
+    <p id="pPrice" class="price big"></p>
+    <p class="muted">Ships via Amazon. Affiliate-enabled checkout.</p>
+    <div class="row">
+      <button id="add" class="btn">Add to Cart</button>
+      <button id="buy" class="btn btn-primary">Buy on Amazon</button>
+    </div>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script src="product.js"></script>
+</body>
+</html>
